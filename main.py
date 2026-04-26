@@ -97,6 +97,7 @@ else:
     model.fit(X, y)
     next_month = np.array([[len(monthly_sales)]])
     prediction = model.predict(next_month)[0]
+    prediction = max(0, prediction)
     st.success(f"Predicted units sold next month: {int(prediction)}")
 
 # ---------- Price Optimization ----------
