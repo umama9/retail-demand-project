@@ -49,7 +49,7 @@ col3.metric("Transactions", product_data["InvoiceNo"].nunique())
 st.divider()
 
 # ---------- Demand Curve ----------
-st.subheader("Price vs Demand (Demand Curve)")
+st.subheader("Demand Curve")
 
 price_demand = product_data.groupby("UnitPrice")["Quantity"].sum().reset_index()
 price_demand = price_demand.sort_values("UnitPrice")
